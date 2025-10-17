@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AGS.Graber.Model;
+using System;
 using UnityEngine;
 using Zenject;
 
@@ -30,7 +31,7 @@ namespace GameCore.Installer
 
         protected virtual void SetModels()
         {
-
+            Container.BindInterfacesAndSelfTo<GrabLevel>().AsSingle().NonLazy();
         }
 
         protected virtual void SetManagers()

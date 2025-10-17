@@ -131,9 +131,6 @@ GameObject:
   - component: {fileID: 245537447}
   - component: {fileID: 245537446}
   - component: {fileID: 245537445}
-  - component: {fileID: 245537449}
-  - component: {fileID: 245537451}
-  - component: {fileID: 245537450}
   m_Layer: 0
   m_Name: GameCamera
   m_TagString: MainCamera
@@ -259,75 +256,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
---- !u!114 &245537449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245537444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b8c96e2cdc154e848a3d9fe62464d42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CameraTargets: []
-  CenterTargetOnStart: 0
-  Axis: 1
-  UpdateType: 0
-  FollowHorizontal: 1
-  HorizontalFollowSmoothness: 0.15
-  FollowVertical: 1
-  VerticalFollowSmoothness: 0.15
-  OffsetX: 0
-  OffsetY: -0.686
-  IsRelativeOffset: 1
-  ZoomWithFOV: 0
-  IgnoreTimeScale: 0
-  CurrentZoomTriggerID: 0
-  IsCameraPositionLeftBounded: 0
-  IsCameraPositionRightBounded: 0
-  IsCameraPositionTopBounded: 0
-  IsCameraPositionBottomBounded: 0
-  GameCamera: {fileID: 245537447}
---- !u!114 &245537450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245537444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60d259ae680f345ccb8abad710dd1263, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 245537449}
-  ZoomOutBorder: 0.6
-  ZoomInBorder: 0.4
-  ZoomInSmoothness: 2
-  ZoomOutSmoothness: 1
-  MaxZoomInAmount: 2
-  MaxZoomOutAmount: 4
-  DisableWhenOneTarget: 1
-  CompensateForCameraPosition: 0
---- !u!114 &245537451
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245537444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ac0ec3d6ad5f4a3d9d184bc3773a3a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _pc2D: {fileID: 245537449}
-  ShakePresets: []
-  ConstantShakePresets: []
-  StartConstantShakePreset: {fileID: 0}
-  CurrentConstantShakePreset: {fileID: 0}
 --- !u!1 &285432697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,7 +1062,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1392525331}
   - component: {fileID: 1392525330}
-  - component: {fileID: 1392525332}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -1154,10 +1081,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89715ad69b973a14899afa2c6730b30b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scriptableObjectInstallers:
-  - {fileID: 11400000, guid: ebcdcee38cbd2c34f84a5da2f4db8a84, type: 2}
-  _monoInstallers:
-  - {fileID: 1392525332}
+  _scriptableObjectInstallers: []
+  _monoInstallers: []
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -1190,18 +1115,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1392525332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392525329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8628078f4361c034c86259db3e029aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1516946404
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,7 +1133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &1516946405
 Camera:
   m_ObjectHideFlags: 0

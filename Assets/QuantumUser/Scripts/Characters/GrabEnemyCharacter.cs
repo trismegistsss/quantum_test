@@ -40,7 +40,7 @@ namespace AGS.Graber.Character
 
         public void InitBehavior(GrabCharacterBase player)
         {
-            _behavior.Initialize(this, player);
+           // _behavior.Initialize(this, player);
         }
 
         // animations
