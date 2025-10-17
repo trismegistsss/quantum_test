@@ -63,7 +63,7 @@ namespace AGS.Graber
                 _view = GetComponent<GrabLevelView>();
                 _view.Refresh();
 
-               // _control = GetComponent<PlayerControl>();
+                //_control = GetComponent<PlayerControl>();
 
                 ShipElementsLoader.Instance.Refresh();
 
