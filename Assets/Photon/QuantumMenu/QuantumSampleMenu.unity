@@ -465,6 +465,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 12a7b15ea36bce843ac6c61b635f6534, type: 2}
     - target: {fileID: 7243461719588803421, guid: 7d78f8a9ae2bcc1408312ef78f87bdf0, type: 3}
+      propertyPath: ConnectArgs.SessionConfig
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b40e1763bfe71446a290be9898db185, type: 2}
+    - target: {fileID: 7243461719588803421, guid: 7d78f8a9ae2bcc1408312ef78f87bdf0, type: 3}
+      propertyPath: ConnectArgs.ServerSettings
+      value: 
+      objectReference: {fileID: 11400000, guid: 11191dbc93a360c4eb28d22f06dbb414, type: 2}
+    - target: {fileID: 7243461719588803421, guid: 7d78f8a9ae2bcc1408312ef78f87bdf0, type: 3}
       propertyPath: DefaultConnectionArgs.SessionConfig
       value: 
       objectReference: {fileID: 0}

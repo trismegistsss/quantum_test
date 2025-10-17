@@ -52,10 +52,27 @@ namespace Quantum.Prototypes {
   [System.SerializableAttribute()]
   [Quantum.Prototypes.Prototype(typeof(Quantum.Input))]
   public unsafe partial class InputPrototype : StructPrototype {
-    [HideInInspector()]
-    public Int32 _empty_prototype_dummy_field_;
+    public FPVector2 Direction;
+    public Button Jump;
     partial void MaterializeUser(Frame frame, ref Quantum.Input result, in PrototypeMaterializationContext context);
     public void Materialize(Frame frame, ref Quantum.Input result, in PrototypeMaterializationContext context = default) {
+        result.Direction = this.Direction;
+        result.Jump = this.Jump;
+        MaterializeUser(frame, ref result, in context);
+    }
+  }
+  [System.SerializableAttribute()]
+  [Quantum.Prototypes.Prototype(typeof(Quantum.MyPlayerLink))]
+  public unsafe partial class MyPlayerLinkPrototype : ComponentPrototype<Quantum.MyPlayerLink> {
+    public PlayerRef Player;
+    partial void MaterializeUser(Frame frame, ref Quantum.MyPlayerLink result, in PrototypeMaterializationContext context);
+    public override Boolean AddToEntity(FrameBase f, EntityRef entity, in PrototypeMaterializationContext context) {
+        Quantum.MyPlayerLink component = default;
+        Materialize((Frame)f, ref component, in context);
+        return f.Set(entity, component) == SetResult.ComponentAdded;
+    }
+    public void Materialize(Frame frame, ref Quantum.MyPlayerLink result, in PrototypeMaterializationContext context = default) {
+        result.Player = this.Player;
         MaterializeUser(frame, ref result, in context);
     }
   }

@@ -1,0 +1,10 @@
+input
+{
+    FPVector2 Direction;
+    button Jump;
+}
+
+component MyPlayerLink 
+{
+    PlayerRef Player;
+}
